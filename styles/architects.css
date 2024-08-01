@@ -11,6 +11,10 @@
   padding: 0;
 }
 /* Share Styles */
+.main {
+  max-width: 1440px;
+  margin: 0 auto;
+}
 .display-flex {
   display: flex;
 }
@@ -22,12 +26,19 @@
 .text-light-gray {
   color: #727272;
 }
+.text-primary {
+  color: #ff900e;
+}
 /* Secondary Color */
 .bg-light {
   background-color: rgba(255, 144, 14, 0.1);
+  padding-bottom: 45px;
+  margin-bottom: 85px;
 }
 /* Button Primary */
 .btn-primary {
+  width: 180px;
+  height: 64px;
   background-color: #ff900e;
   color: white;
   padding: 20px 25px;
@@ -38,20 +49,25 @@
   cursor: pointer;
   /* Semi Bold Means = 600 */
 }
+/* Section Title */
+.section-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+}
 
 /* Header Styles */
-
 /* Navbar Related Styles */
 .navbar {
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 116px !important;
 }
 .brand {
   font-weight: 700;
   font-size: 3rem;
 }
 .nav-links {
-  gap: 50px;
+  gap: 30px;
 }
 .nav-item {
   list-style: none;
@@ -68,7 +84,6 @@
 }
 
 /* Banner Related Styles */
-
 .banner-content {
   max-width: 850px;
   margin: 0 auto;
@@ -86,4 +101,56 @@
 }
 .banner-image {
   width: 100%;
+}
+/* Teams & Feature Related Styles */
+.teams {
+  align-items: center;
+  gap: 70px;
+}
+.team-image-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+.team-image-container img {
+  width: 100%;
+}
+.our-features {
+  max-width: 537px;
+  flex-direction: column;
+  gap: 24px;
+}
+#quick-list {
+  font-weight: 500;
+}
+.features-description {
+  font-size: 1rem;
+}
+/* Responsive For Mobile Devices */
+@media screen and (max-width: 576px) {
+  .navbar,
+  .nav-links {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .teams {
+    flex-direction: column;
+    align-items: center;
+  }
+  .team-image-container {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 24px;
+  }
+  .our-features {
+    margin: 0 30px;
+  }
+}
+/* Responsive For Medium Device */
+@media screen and (min-width: 576px) and (max-width: 992px) {
+  .teams {
+    flex-direction: column;
+  }
+  .navbar {
+    margin: 0 20px 116px 20px;
+  }
 }
