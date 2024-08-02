@@ -15,6 +15,9 @@
   max-width: 1440px;
   margin: 0 auto;
 }
+section {
+  margin-bottom: 130px;
+}
 .display-flex {
   display: flex;
 }
@@ -104,6 +107,7 @@
 }
 /* Teams & Feature Related Styles */
 .teams {
+  justify-content: center;
   align-items: center;
   gap: 70px;
 }
@@ -126,6 +130,74 @@
 .features-description {
   font-size: 1rem;
 }
+
+/* Facts Related Styles */
+.facts {
+  flex-direction: column;
+  gap: 100px;
+}
+.fact-content {
+  max-width: 540px;
+  flex-direction: column;
+  gap: 24px;
+}
+.facts-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 124px;
+  margin: 0 auto;
+}
+.fact-card {
+  width: 240px;
+  height: 240px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid #ff900e;
+  border-radius: 8px;
+}
+.fact-card > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.fact-icon {
+  max-width: 45px;
+}
+.fact-number {
+  font-size: 2.8rem;
+  font-weight: 600;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+.fact-name {
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+/* Our Sponsor Related Styles */
+.our-sponsors {
+  flex-direction: column;
+}
+.sponsor-info {
+  max-width: 540px;
+  text-align: center;
+  margin: 0 auto auto;
+  margin-bottom: 50px;
+}
+.sponsor-info > h3 {
+  margin-bottom: 24px;
+}
+.sponsor-companies {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-content: center;
+  gap: 150px;
+  margin: 0 auto;
+}
+.sponsor-companies img {
+  width: 100%;
+  filter: grayscale(100%);
+}
 /* Responsive For Mobile Devices */
 @media screen and (max-width: 576px) {
   .navbar,
@@ -142,9 +214,24 @@
     gap: 24px;
   }
   .our-features {
-    margin: 0 30px;
+    margin: 0 20px;
+  }
+  .facts-container {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 50px;
+  }
+  /* .facts {
+  } */
+  .fact-content {
+    margin: 0 20px;
+  }
+  .sponsor-companies {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 30px;
+    margin: 0 auto;
   }
 }
+
 /* Responsive For Medium Device */
 @media screen and (min-width: 576px) and (max-width: 992px) {
   .teams {
@@ -152,5 +239,17 @@
   }
   .navbar {
     margin: 0 20px 116px 20px;
+  }
+  .facts-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+  }
+  .fact-content {
+    margin: 0 auto;
+  }
+  .sponsor-companies {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    margin: 0 auto;
   }
 }
